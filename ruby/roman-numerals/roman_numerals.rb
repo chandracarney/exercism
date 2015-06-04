@@ -8,7 +8,7 @@ class Fixnum
   def to_roman
     number = self
     roman = ""
-    ROMAN.map do |numeral, value|
+    ROMAN.each do |numeral, value|
       roman << numeral && number -= value until number < value
     end
     roman
